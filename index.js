@@ -25,7 +25,6 @@ app.use(function (req, res, next) {
   
 
 
-
 mongoose.connect(`mongodb+srv://Ashu:Ashu1998@cluster0.kwidsgh.mongodb.net/test?retryWrites=true&w=majority`)
   .then(() => {
     console.log("DB Connetion Successfull");
@@ -38,5 +37,5 @@ mongoose.connect(`mongodb+srv://Ashu:Ashu1998@cluster0.kwidsgh.mongodb.net/test?
   app.use("/api/user", userRoutes);
 
 app.listen( port , () => {
-  console.log("server started on port 5000");
+  console.log(`server started on port ${port}`);
 });
