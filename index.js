@@ -9,7 +9,7 @@ const port = process.env.PORT ||  5000 ;
 
 const app = express();
 
-app.use(cors());
+
 app.use(express.json());
 
 app.use ( express.urlencoded ( { extended: true } ) )
@@ -26,10 +26,7 @@ app.use(function (req, res, next) {
 
 
 
-mongoose.connect(`mongodb+srv://Ashu:Ashu1998@cluster0.kwidsgh.mongodb.net/test?retryWrites=true&w=majority`, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+mongoose.connect(`mongodb+srv://Ashu:Ashu1998@cluster0.kwidsgh.mongodb.net/test?retryWrites=true&w=majority`)
   .then(() => {
     console.log("DB Connetion Successfull");
   })
